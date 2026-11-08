@@ -23,4 +23,9 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+valgrind: $(NAME)
+	@valgrind --leak-check=full --show-leak-kinds=all --error-exitcode=1 -q ./$(NAME) \
+		&& echo "\033[32m[valgrind] OK: no leaks, no errors\033[0m" \
+		|| (echo "\033[31m[valgrind] LEAK or memory error detected\033[0m" && exit 1)
+
+.PHONY: all clean fclean re valgrind

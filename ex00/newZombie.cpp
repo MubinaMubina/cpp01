@@ -1,3 +1,6 @@
 #include "Zombie.hpp"
 
-// TODO
+Zombie*	newZombie(std::string name)
+{
+	return (new Zombie(name));
+}
