@@ -8,8 +8,8 @@ class HumanB
 {
 	private:
 		std::string	name;
-		// TODO: weapon member — reference or pointer? (HumanB may have no weapon)
-
+		Weapon* weapon; 
+		
 	public:
 		HumanB(std::string name);
 		~HumanB(void);

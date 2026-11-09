@@ -8,7 +8,7 @@ class HumanA
 {
 	private:
 		std::string	name;
-		// TODO: weapon member — reference or pointer? (HumanA is always armed)
+		Weapon&		weapon;
 
 	public:
 		HumanA(std::string name, Weapon& weapon);
