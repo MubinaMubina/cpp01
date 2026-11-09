@@ -6,8 +6,8 @@ int	main(void)
 	int N = 5;
 	int i = 0;
 
-	std::cout << "--- Test 1: horde of 5 ---" << std::endl;
-	Zombie* horde = zombieHorde(N, "Walker");
+	std::cout << "--- Test 1 for N = 5 ---" << std::endl;
+	Zombie* horde = zombieHorde(N, "Nikii");
 
 	if (horde)
 	{
@@ -19,8 +19,8 @@ int	main(void)
 		delete[] horde;
 	}
 
-	std::cout << "\n--- Test 2: horde of 1 ---" << std::endl;
-	horde = zombieHorde(1, "Lonely");
+	std::cout << "\n--- Test 2: horde of 1 (mateo need a brain even in a human form) ---" << std::endl;
+	horde = zombieHorde(1, "Mateo");
 	if (horde)
 	{
 		horde[0].announce();
@@ -28,7 +28,7 @@ int	main(void)
 	}
 
 	std::cout << "\n--- Test 3: horde of 0 ---" << std::endl;
-	horde = zombieHorde(0, "Nobody");
+	horde = zombieHorde(0, "PEAK");
 	if (horde)
 		delete[] horde;
 	else
